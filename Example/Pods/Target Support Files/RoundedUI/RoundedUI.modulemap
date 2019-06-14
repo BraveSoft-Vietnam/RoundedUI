@@ -1,0 +1,6 @@
+framework module RoundedUI {
+  umbrella header "RoundedUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

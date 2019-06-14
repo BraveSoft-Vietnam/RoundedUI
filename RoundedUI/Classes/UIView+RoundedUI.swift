@@ -1,0 +1,135 @@
+//
+//  UIView+RoundedUI.swift
+//  RoundedUI
+//
+//  Created by Hien Pham on 6/14/19.
+//
+
+import Foundation
+import UIKit
+
+fileprivate struct AssociatedKeys {
+    static var isCircle: UInt8 = 0
+}
+
+/**
+ Convenient extension for setting CALayer's rounded corners attributes directly from UIView
+ 
+ Note: Please don't use this extension directly. Instead use RoundedView or RoundedButton in order to make preview in Interface Builder work.
+ */
+@IBDesignable public extension UIView {
+    /**
+     Line stroke width. Default is 0
+     */
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+    /**
+     Rounded corner radius. Default is 0
+     */
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            self.refreshRounded(cornerRadius: newValue, isCircle: self.isCircle)
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+    /**
+     Try to round as circle. If `true`, `cornerRadius` will be ignore.
+     */
+    @IBInspectable var isCircle: Bool {
+        get {
+            let defaultValue = false
+            guard let value = objc_getAssociatedObject(self, &AssociatedKeys.isCircle) as? Bool else {
+                return defaultValue
+            }
+            return value
+        }
+        
+        set {
+            objc_setAssociatedObject(self, &AssociatedKeys.isCircle, newValue, .OBJC_ASSOCIATION_COPY)
+            self.refreshRounded(cornerRadius: self.cornerRadius, isCircle: newValue)
+        }
+    }
+    
+    fileprivate func refreshRounded(cornerRadius: CGFloat, isCircle: Bool) {
+        let drawRadius = isCircle == true ? min(self.bounds.size.height, self.bounds.size.width) / 2 : cornerRadius
+        layer.cornerRadius = drawRadius
+    }
+}
+
+/**
+ Convenient extension for setting CALayer's shadow attributes directly from UIView
+ 
+ Note: Please don't use this extension directly. Instead use RoundedView or RoundedButton in order to make preview in Interface Builder work.
+ */
+@IBDesignable public extension UIView {
+    /**
+     The color of the layer’s shadow.
+     
+     The default value of this property is an opaque black color.
+     
+     Note: When config shadow please make sure clipsToBound is turned off or shadow will not be visible
+     */
+    @IBInspectable var shadowColor: UIColor? {
+        set {
+            layer.shadowColor = newValue?.cgColor
+        }
+        get {
+            guard let color = layer.shadowColor else {
+                return nil
+            }
+            return UIColor(cgColor: color)
+        }
+    }
+    /**
+     The blur radius (in points) used to render the layer’s shadow.
+     
+     You specify the radius The default value of this property is 3.0.
+     
+     Note: When config shadow please make sure clipsToBound is turned off or shadow will not be visible
+     */
+    @IBInspectable var shadowRadius: CGFloat {
+        set {
+            layer.shadowRadius = newValue
+        }
+        get {
+            return layer.shadowRadius
+        }
+    }
+    /**
+     The offset (in points) of the layer’s shadow.
+     
+     The default value of this property is (0.0, -3.0).
+     
+     Note: When config shadow please make sure clipsToBound is turned off or shadow will not be visible
+     */
+    @IBInspectable var shadowOffset: CGSize {
+        set {
+            layer.shadowOffset = newValue
+        }
+        get {
+            return layer.shadowOffset
+        }
+    }
+    /**
+     The opacity of the layer’s shadow.
+     
+     The value in this property must be in the range 0.0 (transparent) to 1.0 (opaque). The default value of this property is 0.0.
+     Note: When config shadow please make sure clipsToBound is turned off or shadow will not be visible
+     */
+    @IBInspectable var shadowOpacity: Float {
+        set {
+            layer.shadowOpacity = newValue
+        }
+        get {
+            return layer.shadowOpacity
+        }
+    }
+}

@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C6A344A9E837736E41F1A7B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1C6A344A9E837736E41F1A7B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		35B636B9AACEC5D1505AAA15 /* Pods_RoundedUI_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoundedUI_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADCC8030B827990BEFFEE87 /* Pods-RoundedUI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoundedUI_Example.release.xcconfig"; path = "Target Support Files/Pods-RoundedUI_Example/Pods-RoundedUI_Example.release.xcconfig"; sourceTree = "<group>"; };
 		569191764C4010AF3606A5F2 /* Pods-RoundedUI_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoundedUI_Tests.debug.xcconfig"; path = "Target Support Files/Pods-RoundedUI_Tests/Pods-RoundedUI_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -44,8 +44,8 @@
 		607FACE51AFB9204008FA782 /* RoundedUI_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoundedUI_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		C508B16431F8D9C8D1C057F8 /* RoundedUI.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = RoundedUI.podspec; path = ../RoundedUI.podspec; sourceTree = "<group>"; };
-		E3844DE9B094246A7B321301 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C508B16431F8D9C8D1C057F8 /* RoundedUI.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RoundedUI.podspec; path = ../RoundedUI.podspec; sourceTree = "<group>"; };
+		E3844DE9B094246A7B321301 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FA230A9125C575B6B70ADC89 /* Pods-RoundedUI_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoundedUI_Example.debug.xcconfig"; path = "Target Support Files/Pods-RoundedUI_Example/Pods-RoundedUI_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +156,6 @@
 				569191764C4010AF3606A5F2 /* Pods-RoundedUI_Tests.debug.xcconfig */,
 				5DFDEB878D9655C89523CDA8 /* Pods-RoundedUI_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -509,7 +509,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -524,7 +524,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

@@ -1,0 +1,6 @@
+framework module Pods_RoundedUI_Example {
+  umbrella header "Pods-RoundedUI_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
