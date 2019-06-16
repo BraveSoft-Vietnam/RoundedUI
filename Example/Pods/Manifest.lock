@@ -11,7 +11,7 @@ PODS:
     - FBSnapshotTestCase (~> 2.0)
     - Nimble (~> 7.0)
   - Quick (1.2.0)
-  - RoundedUI (0.1.0)
+  - RoundedUI (1.0.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -36,7 +36,7 @@ SPEC CHECKSUMS:
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  RoundedUI: b00b9263eeb76e68b7e0a830b49bbcafddd5c5ac
+  RoundedUI: 8ffce6d91d303009defb2788258438d5e3afbcc7
 
 PODFILE CHECKSUM: fcc70706bfb143c19e2f46408088f128f83e1169
 

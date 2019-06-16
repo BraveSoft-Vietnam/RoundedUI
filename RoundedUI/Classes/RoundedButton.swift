@@ -143,7 +143,11 @@ extension RoundedButton {
         if self.state.contains(.disabled) == true {
             fillColor = self.fillColorDisabled ?? fillColor
         } else if self.state.contains(.selected) == true {
-            fillColor = self.fillColorSelected ?? fillColor
+            if self.state.contains(.highlighted) == false {
+                fillColor = self.fillColorSelected ?? fillColor
+            } else {
+                fillColor = self.fillColorNormal
+            }
         } else if self.state.contains(.highlighted) == true {
             if let fillColorHighlighted: UIColor = self.fillColorHighlighted {
                 fillColor = fillColorHighlighted
@@ -160,7 +164,11 @@ extension RoundedButton {
         if self.state.contains(.disabled) == true {
             borderColor = self.borderColorDisabled ?? borderColor
         } else if self.state.contains(.selected) == true {
-            borderColor = self.borderColorSelected ?? borderColor
+            if self.state.contains(.highlighted) == false {
+                borderColor = self.borderColorSelected ?? borderColor
+            } else {
+                borderColor = self.borderColorNormal
+            }
         } else if self.state.contains(.highlighted) == true {
             if let borderColorHighlighted: UIColor = self.borderColorHighlighted {
                 borderColor = borderColorHighlighted

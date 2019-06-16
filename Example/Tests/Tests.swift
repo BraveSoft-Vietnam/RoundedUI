@@ -96,6 +96,18 @@ class RoundedButtonSpec: QuickSpec {
                     button.isEnabled = false
                     expect(button.layer.backgroundColor) == color.cgColor
                 })
+                
+                it("fillColorNormal show when is selected and is highlighted", closure: {
+                    let colorNormal: UIColor = UIColor.red
+                    let colorHighlighted: UIColor = UIColor.green
+                    let colorSelected: UIColor = UIColor.blue
+                    button.fillColorNormal = colorNormal
+                    button.fillColorHighlighted = colorHighlighted
+                    button.fillColorSelected = colorSelected
+                    button.isSelected = true
+                    button.isHighlighted = true
+                    expect(button.layer.backgroundColor) == colorNormal.cgColor
+                })
             })
             
             context("borderColor", closure: {
@@ -125,6 +137,17 @@ class RoundedButtonSpec: QuickSpec {
                     button.borderColorDisabled = color
                     button.isEnabled = false
                     expect(button.layer.borderColor) == color.cgColor
+                })
+                it("borderColorNormal show when is selected and is highlighted", closure: {
+                    let colorNormal: UIColor = UIColor.red
+                    let colorHighlighted: UIColor = UIColor.green
+                    let colorSelected: UIColor = UIColor.blue
+                    button.borderColorNormal = colorNormal
+                    button.borderColorHighlighted = colorHighlighted
+                    button.borderColorSelected = colorSelected
+                    button.isSelected = true
+                    button.isHighlighted = true
+                    expect(button.layer.borderColor) == colorNormal.cgColor
                 })
             })
             
