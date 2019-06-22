@@ -12,18 +12,4 @@ import UIKit
  */
 @IBDesignable
 open class RoundedView: UIView {
-    /**
-     Border color. Default is clear color.
-     */
-    @IBInspectable open var borderColor: UIColor? {
-        set {
-            layer.borderColor = newValue?.cgColor
-        }
-        get {
-            guard let color = layer.borderColor else {
-                return nil
-            }
-            return UIColor(cgColor: color)
-        }
-    }
 }

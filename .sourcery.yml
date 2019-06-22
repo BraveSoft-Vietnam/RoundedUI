@@ -1,0 +1,6 @@
+sources:
+  - ./RoundedUI
+templates:
+  - ./Sourcery/Template
+output:
+  ./Sourcery/Generated

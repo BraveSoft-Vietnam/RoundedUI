@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+
 extension UIColor {
     internal func lighter(offset: CGFloat = 0.2) -> UIColor? {
         var r: CGFloat = 0

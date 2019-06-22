@@ -12,6 +12,8 @@ fileprivate struct AssociatedKeys {
     static var isCircle: UInt8 = 0
 }
 
+protocol RoundedViewProtocol {}
+
 /**
  Convenient extension for setting CALayer's rounded corners attributes directly from UIView
  
@@ -132,4 +134,20 @@ fileprivate struct AssociatedKeys {
             return layer.shadowOpacity
         }
     }
+    
+    /**
+     Border color. Default is clear color.
+     */
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            layer.borderColor = newValue?.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else {
+                return nil
+            }
+            return UIColor(cgColor: color)
+        }
+    }
+
 }

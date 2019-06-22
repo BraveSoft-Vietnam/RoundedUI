@@ -156,7 +156,7 @@ extension RoundedButton {
             }
         }
         
-        self.layer.backgroundColor = fillColor.cgColor
+        self.backgroundColor = fillColor
     }
     
     fileprivate func refreshDisplayBorderColor() {
@@ -177,7 +177,7 @@ extension RoundedButton {
             }
         }
         
-        self.layer.borderColor = borderColor.cgColor
+        self.borderColor = borderColor
     }
     
     fileprivate func refreshComponentsStates() {

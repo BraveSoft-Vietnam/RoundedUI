@@ -16,6 +16,10 @@ class RoundedExtensionSpec: QuickSpec {
                     view.borderWidth = 2
                     expect(view.layer.borderWidth) == 2
                 }
+                it("borderColor work") {
+                    view.borderColor = UIColor.gray
+                    expect(view.layer.borderColor) == UIColor.gray.cgColor
+                }
                 it("cornerRadius work") {
                     view.cornerRadius = 12
                     expect(view.layer.cornerRadius) == 12
@@ -45,21 +49,6 @@ class RoundedExtensionSpec: QuickSpec {
                     expect(view.layer.shadowOpacity) == 0.5
                 })
             })
-        }
-    }
-}
-
-class RoundedViewSpec: QuickSpec {
-    override func spec() {
-        var view: RoundedView!
-        beforeEach {
-            view = RoundedView(frame: CGRect(x: 0, y: 0, width: 280, height: 44))
-        }
-        describe("setting") {
-            it("borderColor work") {
-                view.borderColor = UIColor.gray
-                expect(view.layer.borderColor) == UIColor.gray.cgColor
-            }
         }
     }
 }

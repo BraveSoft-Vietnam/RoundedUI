@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E397AF422BDCC2D00396354 /* SourceryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E397AF322BDCC2D00396354 /* SourceryProtocols.swift */; };
+		0E397AF622BDCD5400396354 /* RoundedShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E397AF522BDCD5400396354 /* RoundedShapeLayer.swift */; };
+		0E397B0022BDEA3D00396354 /* AdvanceRoundedButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E397AFE22BDEA3D00396354 /* AdvanceRoundedButtonTests.swift */; };
+		0E397B0122BDEA3D00396354 /* AdvanceRoundedViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E397AFF22BDEA3D00396354 /* AdvanceRoundedViewTests.swift */; };
 		0E478B1522B5C50C000B400B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E478B1322B5C50C000B400B /* ViewController.swift */; };
 		0E478B1622B5C50C000B400B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E478B1422B5C50C000B400B /* ViewController.xib */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* BaseRoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* BaseRoundTests.swift */; };
 		B412989231D8985C67408290 /* Pods_RoundedUI_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AA1E4E1D7E8334872336AD /* Pods_RoundedUI_Tests.framework */; };
 		C46361090937789E645F299C /* Pods_RoundedUI_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B636B9AACEC5D1505AAA15 /* Pods_RoundedUI_Example.framework */; };
 /* End PBXBuildFile section */
@@ -28,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E397AF322BDCC2D00396354 /* SourceryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryProtocols.swift; sourceTree = "<group>"; };
+		0E397AF522BDCD5400396354 /* RoundedShapeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShapeLayer.swift; sourceTree = "<group>"; };
+		0E397AFE22BDEA3D00396354 /* AdvanceRoundedButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdvanceRoundedButtonTests.swift; path = ../../Sourcery/Generated/Tests/AdvanceRoundedButtonTests.swift; sourceTree = "<group>"; };
+		0E397AFF22BDEA3D00396354 /* AdvanceRoundedViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdvanceRoundedViewTests.swift; path = ../../Sourcery/Generated/Tests/AdvanceRoundedViewTests.swift; sourceTree = "<group>"; };
 		0E478B1322B5C50C000B400B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E478B1422B5C50C000B400B /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		1C6A344A9E837736E41F1A7B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -43,7 +51,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* RoundedUI_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoundedUI_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* BaseRoundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoundTests.swift; sourceTree = "<group>"; };
 		C508B16431F8D9C8D1C057F8 /* RoundedUI.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RoundedUI.podspec; path = ../RoundedUI.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E3844DE9B094246A7B321301 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FA230A9125C575B6B70ADC89 /* Pods-RoundedUI_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoundedUI_Example.debug.xcconfig"; path = "Target Support Files/Pods-RoundedUI_Example/Pods-RoundedUI_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,7 +123,11 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACEB1AFB9204008FA782 /* BaseRoundTests.swift */,
+				0E397AF522BDCD5400396354 /* RoundedShapeLayer.swift */,
+				0E397AF322BDCC2D00396354 /* SourceryProtocols.swift */,
+				0E397AFE22BDEA3D00396354 /* AdvanceRoundedButtonTests.swift */,
+				0E397AFF22BDEA3D00396354 /* AdvanceRoundedViewTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -365,7 +377,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* BaseRoundTests.swift in Sources */,
+				0E397AF622BDCD5400396354 /* RoundedShapeLayer.swift in Sources */,
+				0E397B0022BDEA3D00396354 /* AdvanceRoundedButtonTests.swift in Sources */,
+				0E397AF422BDCC2D00396354 /* SourceryProtocols.swift in Sources */,
+				0E397B0122BDEA3D00396354 /* AdvanceRoundedViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
