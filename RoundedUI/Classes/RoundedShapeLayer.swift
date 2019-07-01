@@ -7,6 +7,11 @@
 
 import UIKit
 
+/**
+ Layer class implementing advance round corners features.
+ 
+ Note: This class override default value of fillColor from black to clear color.
+ */
 open class RoundedShapeLayer: CAShapeLayer {
     open var roundTopLeft: Bool = true {
         didSet {
@@ -68,6 +73,7 @@ open class RoundedShapeLayer: CAShapeLayer {
     fileprivate func setUp() {
         self.addSublayer(self.strokeLayer)
         self.strokeLayer.fillColor = UIColor.clear.cgColor
+        self.fillColor = UIColor.clear.cgColor
     }
     
     public override init() {
