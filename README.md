@@ -1,6 +1,10 @@
 # RoundedUI
 
-Configure rounded corners UI components on your Interface Builder .
+![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)
+![Code Coverage](https://img.shields.io/badge/Code%20Coverage-100%25-green.svg)
+![Pod](https://img.shields.io/badge/pod-v1.1.0-blue.svg)  
+
+Configure rounded corners UI components on your Interface Builder, written in Swift.
 
 In mobile projects there is a type of view/button which we has to deal usually. We can call it a rounded button/view because of its attributes. The following is common attributes for view:  
 
@@ -83,7 +87,7 @@ Because UIView doesn't have highlighted, selected and disable state like UIButto
 #### Fill color
 ##### RoundedButton
 1. `fillColorNormal`: Fill color for normal state. Default `UIColor.clearColor()`
-2. `fillColorHighlighted`: Fill color for highlighted state. Default is `fillColorNormal` with darker tone.
+2. `fillColorHighlighted`: Fill color for highlighted state. Default is `fillColorNormal` with darker tone if `fillColorNormal` is compatible with RGB, else is nil.
 3. `fillColorSelected`: Fill color for selected state. Default is `UIColor.clearColor()`.
 4. `fillColorDisabled`: Fill color for disabled state. Default is `UIColor.clearColor()`.
 
@@ -93,7 +97,7 @@ Because UIView doesn't have highlighted, selected and disable state like UIButto
 #### Border Color
 ##### RoundedButton
 1. `strokeColorNormal`: Border color for normal state. Default `UIColor.clearColor()`
-2. `strokeColorHighlighted`: Border color for highlighted state. Default is `strokeColorNormal` with darker tone.
+2. `strokeColorHighlighted`: Border color for highlighted state. Default is `strokeColorNormal` with darker tone if `strokeColorNormal` is compatible with RGB, else is nil.
 3. `strokeColorSelected`: Border color for selected state. Default is `UIColor.clearColor()`.
 4. `strokeColorDisabled`: Border color for disabled state. Default is `UIColor.clearColor()`.
 
@@ -124,6 +128,15 @@ You specify the radius The default value of this property is 3.0.
 The default value of this property is (0.0, -3.0).
 4. `shadowOpacity`: The opacity of the layer’s shadow.  
 The value in this property must be in the range 0.0 (transparent) to 1.0 (opaque). The default value of this property is 0.0.
+
+#### Advance Round Corners
+Sometimes you might want to round just some specific corners such as only top left, bottom right, ... In those case `AdvanceRoundedView` and `AdvanceRoundedButton` offers you the ability to round or not round specific corners with the following properties:
+1. `roundTopLeft`: Round top left corner of the view. If `true` then rounded, else not rounded.
+2. `roundTopRight`: Round top right corner of the view. If `true` then rounded, else not rounded.
+3. `roundBottomLeft`: Round bottom left corner of the view. If `true` then rounded, else not rounded.
+4. `roundBottomRight`: Round bottom right corner of the view. If `true` then rounded, else not rounded.  
+
+**Note**: Because of typical technical issues while implementing this feature, please try to use `RoundedView` and `RoundedButton` as much as possible. Only use `AdvanceRoundedView` and `AdvanceRoundedButton` when you have to round specific corners.
 
 ## Author
 
