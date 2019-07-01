@@ -8,14 +8,20 @@
 
 import UIKit
 import RoundedUI
+import PureLayout
 
 class ViewController: UIViewController {
     @IBOutlet weak var roundedButton: RoundedButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet var content: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.scrollView.addSubview(self.content)
+        self.content.autoPinEdgesToSuperviewEdges()
+        self.content.autoMatch(.width, to: .width, of: self.scrollView)
     }
 
     @IBAction func selectedSwitchChanged(_ sender: UISwitch) {
