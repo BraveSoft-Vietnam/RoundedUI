@@ -104,6 +104,44 @@ class RoundedShapeLayerSpec: QuickSpec {
                     expect(actualPath) == expectedPath
                 }
             })
+            context("maskToBounds", closure: {
+                var layer: RoundedShapeLayer!
+                beforeEach {
+                    layer = RoundedShapeLayer()
+                    layer.frame = CGRect(x: 0, y: 0, width: 280, height: 44)
+                }
+                it("maskToBounds enable works") {
+                    // Set corner radius.
+                    let cornerRadius: CGFloat = 10
+                    layer.shapeCornerRadius = cornerRadius
+                    layer.masksToBounds = true
+                    layer.roundTopRight = false
+                    layer.roundBottomLeft = false
+                    
+                    var corners: UIRectCorner = .allCorners
+                    corners.remove(UIRectCorner.topRight)
+                    corners.remove(UIRectCorner.bottomLeft)
+                    let expectedPath: UIBezierPath = UIBezierPath(roundedRect: layer.bounds, byRoundingCorners:corners, cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
+
+                    let maskLayer: CAShapeLayer = layer.mask as! CAShapeLayer
+                    let actualPath: UIBezierPath = UIBezierPath(cgPath: maskLayer.path!)
+
+                    expect(actualPath) == expectedPath
+                }
+                it("maskToBounds disable works") {
+                    // Set corner radius.
+                    let cornerRadius: CGFloat = 10
+                    layer.shapeCornerRadius = cornerRadius
+                    layer.masksToBounds = false
+                    
+                    expect(layer.mask).to(beNil())
+                }
+            })
+            context("init", closure: {
+                it("with coder won't work") {
+                    expect { RoundedShapeLayer(coder: NSCoder()) }.to(throwAssertion())
+                }
+            })
         }
     }
 }

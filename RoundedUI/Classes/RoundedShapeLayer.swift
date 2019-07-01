@@ -51,6 +51,12 @@ open class RoundedShapeLayer: CAShapeLayer {
         self.strokeLayer.mask = mask
     }
     
+    open override var masksToBounds: Bool {
+        didSet {
+            self.updateRoundCorners()
+        }
+    }
+    
     open var shapeCornerRadius: CGFloat = 0 {
         didSet {
             self.updateRoundCorners()
@@ -64,19 +70,13 @@ open class RoundedShapeLayer: CAShapeLayer {
         self.strokeLayer.fillColor = UIColor.clear.cgColor
     }
     
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.setUp()
-    }
-    
-    public override init(layer: Any) {
-        super.init(layer: layer)
-        self.setUp()
-    }
-    
     public override init() {
         super.init()
         self.setUp()
+    }
+        
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     open override func layoutSublayers() {

@@ -20,7 +20,7 @@ open class RoundedButton: UIButton {
         }
     }
     /**
-     Fill color for highlighted state. Default is fillColorNormal with darker tone.
+     Fill color for highlighted state. Default is fillColorNormal with darker tone if fillColorNormal is compatible with RGB, else is nil.
      */
     @IBInspectable open var fillColorHighlighted: UIColor? {
         didSet {
@@ -52,7 +52,7 @@ open class RoundedButton: UIButton {
         }
     }
     /**
-     Border color for highlighted state. Default is borderColorNormal with darker tone.
+     Border color for highlighted state. Default is borderColorNormal with darker tone if borderColorNormal is compatible with RGB, else is nil.
      */
     @IBInspectable open var borderColorHighlighted: UIColor? {
         didSet {

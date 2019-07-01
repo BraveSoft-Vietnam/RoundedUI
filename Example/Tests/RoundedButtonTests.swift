@@ -1,57 +1,15 @@
-// https://github.com/Quick/Quick
+//
+//  RoundedButtonTests.swift
+//  RoundedUI_Tests
+//
+//  Created by Hien Pham on 7/1/19.
+//  Copyright © 2019 CocoaPods. All rights reserved.
+//
 
+import Foundation
 import Quick
 import Nimble
 import RoundedUI
-
-class RoundedExtensionSpec: QuickSpec {
-    override func spec() {
-        var view: UIView!
-        beforeEach {
-            view = UIView(frame: CGRect(x: 0, y: 0, width: 280, height: 44))
-        }
-        describe("setting") {
-            context("rounded", closure: {
-                it("borderWidth work") {
-                    view.borderWidth = 2
-                    expect(view.layer.borderWidth) == 2
-                }
-                it("borderColor work") {
-                    view.borderColor = UIColor.gray
-                    expect(view.layer.borderColor) == UIColor.gray.cgColor
-                }
-                it("cornerRadius work") {
-                    view.cornerRadius = 12
-                    expect(view.layer.cornerRadius) == 12
-                }
-                it("isCircle work", closure: {
-                    view.isCircle = true
-                    expect(view.layer.cornerRadius) == (44/2)
-                })
-            })
-            
-            context("shadow", closure: {
-                it("shadowColor work") {
-                    view.shadowColor = UIColor.green
-                    expect(view.layer.shadowColor) == UIColor.green.cgColor
-                }
-                it("shadowRadius work") {
-                    view.shadowRadius = 5
-                    expect(view.layer.shadowRadius) == 5
-                }
-                it("shadowOffset work", closure: {
-                    let shadowOffset: CGSize = CGSize(width: 3, height: 3)
-                    view.shadowOffset = shadowOffset
-                    expect(view.layer.shadowOffset) == shadowOffset
-                })
-                it("shadowOpacity work", closure: {
-                    view.shadowOpacity = 0.5
-                    expect(view.layer.shadowOpacity) == 0.5
-                })
-            })
-        }
-    }
-}
 
 class RoundedButtonSpec: QuickSpec {
     override func spec() {
@@ -66,6 +24,12 @@ class RoundedButtonSpec: QuickSpec {
                     let color: UIColor = UIColor.red
                     button.fillColorNormal = color
                     expect(button.layer.backgroundColor) == color.cgColor
+                })
+                it("fillColorHighlighted default will be nil if fillColorNormal not compatible with RGB", closure: {
+                    let color: UIColor = UIColor(patternImage: UIImage())
+                    button.fillColorNormal = color
+                    button.isHighlighted = true
+                    expect(button.layer.backgroundColor).to(beNil())
                 })
                 it("fillColorHighlighted work", closure: {
                     let color: UIColor = UIColor.green
@@ -115,6 +79,12 @@ class RoundedButtonSpec: QuickSpec {
                     button.isHighlighted = true
                     expect(button.layer.borderColor) == color.cgColor
                 })
+                it("borderColorHighlighted default will be nil if borderColorNormal not compatible with RGB", closure: {
+                    let color: UIColor = UIColor(patternImage: UIImage())
+                    button.borderColorNormal = color
+                    button.isHighlighted = true
+                    expect(button.layer.borderColor).to(beNil())
+                })
                 it("borderColorSelected work", closure: {
                     let color: UIColor = UIColor.black
                     button.borderColorSelected = color
@@ -155,7 +125,7 @@ class RoundedButtonSpec: QuickSpec {
                     button.components = children
                 }
                 
-
+                
                 it("components can be highlighted", closure: {
                     button.isHighlighted = true
                     for child: UIButton in button.components {
@@ -179,6 +149,17 @@ class RoundedButtonSpec: QuickSpec {
                     button.isHighlighted = true
                     for child: UIButton in button.components {
                         expect(child.isHighlighted) == false
+                    }
+                })
+                it("components userInteractionEnabled should be disable after set", closure: {
+                    for child: UIButton in button.components {
+                        expect(child.isUserInteractionEnabled) == false
+                    }
+                })
+                it("components userInteractionEnabled should be restore after enable", closure: {
+                    button.components = []
+                    for child: UIButton in button.components {
+                        expect(child.isUserInteractionEnabled) == true
                     }
                 })
             })

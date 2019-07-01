@@ -12,9 +12,4 @@ extension CALayer {
         layer.removeFromSuperlayer()
         self.addSublayer(layer)
     }
-    
-    func sendSublayerToBack(_ layer: CALayer) {
-        layer.removeFromSuperlayer()
-        self.insertSublayer(layer, at: 0)
-    }
 }
