@@ -52,7 +52,7 @@ source 'https://bsvframeworks@bitbucket.org/bravesoftvietnam/cocoapods-specs.git
 ```  
 then add:  
 ```ruby
-pod 'RoundedUI','~> 1.0.0'
+pod 'RoundedUI'
 ```
 After that make sure this line is not commented:  
 ```ruby
