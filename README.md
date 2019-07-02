@@ -134,7 +134,9 @@ Sometimes you might want to round just some specific corners such as only top le
 3. `roundBottomLeft`: Round bottom left corner of the view. If `true` then rounded, else not rounded.
 4. `roundBottomRight`: Round bottom right corner of the view. If `true` then rounded, else not rounded.  
 
-**Note**: Because of typical technical issues while implementing this feature, please try to use `RoundedView` and `RoundedButton` as much as possible. Only use `AdvanceRoundedView` and `AdvanceRoundedButton` when you have to round specific corners.
+**Note**: 
+- Because of typical technical issues while implementing this feature, please try to use `RoundedView` and `RoundedButton` as much as possible. Only use `AdvanceRoundedView` and `AdvanceRoundedButton` when you have to round specific corners.
+- `AdvanceRoundedView` and `AdvanceRoundedButton` is not compatible with `bounds` or `frame` change animation. Instead, use `RoundedView` and `RoundedButton`. If you try to animate with `AdvanceRoundedView` and `AdvanceRoundedButton` the result may be weird and undefined.
 
 ## Author
 
