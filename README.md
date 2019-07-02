@@ -129,6 +129,7 @@ The value in this property must be in the range 0.0 (transparent) to 1.0 (opaque
 
 #### Advance Round Corners
 Sometimes you might want to round just some specific corners such as only top left, bottom right, ... In those case `AdvanceRoundedView` and `AdvanceRoundedButton` offers you the ability to round or not round specific corners with the following properties:
+
 1. `roundTopLeft`: Round top left corner of the view. If `true` then rounded, else not rounded.
 2. `roundTopRight`: Round top right corner of the view. If `true` then rounded, else not rounded.
 3. `roundBottomLeft`: Round bottom left corner of the view. If `true` then rounded, else not rounded.
