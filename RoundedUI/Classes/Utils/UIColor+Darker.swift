@@ -16,7 +16,7 @@ extension UIColor {
         var a: CGFloat = 0
         
         if self.getRed(&r, green: &g, blue: &b, alpha: &a) {
-            return UIColor(red: CGFloat.maximum(r - offset, 0.0), green: g, blue: b, alpha: a)
+            return UIColor(red: CGFloat.maximum(r - offset, 0.0), green: CGFloat.maximum(g - offset, 0.0), blue: CGFloat.maximum(b - offset, 0.0), alpha: a)
         }
         return nil
     }

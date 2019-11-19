@@ -31,6 +31,12 @@ class RoundedButtonSpec: QuickSpec {
                     button.isHighlighted = true
                     expect(button.layer.backgroundColor).to(beNil())
                 })
+                it("fillColorHighlighted default correct", closure: {
+                    let color: UIColor = UIColor.white
+                    button.fillColorNormal = color
+                    button.isHighlighted = true
+                    expect(button.layer.backgroundColor) == #colorLiteral(red: 0.8, green: 0.8000000119, blue: 0.8000000119, alpha: 1).cgColor
+                })
                 it("fillColorHighlighted work", closure: {
                     let color: UIColor = UIColor.green
                     button.fillColorHighlighted = color
