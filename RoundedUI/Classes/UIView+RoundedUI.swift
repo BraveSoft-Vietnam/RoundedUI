@@ -36,7 +36,7 @@ protocol RoundedViewProtocol {}
      */
     @IBInspectable var cornerRadius: CGFloat {
         set {
-            self.refreshRounded(cornerRadius: newValue, isCircle: self.isCircle)
+            refreshRounded(cornerRadius: newValue)
         }
         get {
             return layer.cornerRadius
@@ -56,11 +56,15 @@ protocol RoundedViewProtocol {}
         
         set {
             objc_setAssociatedObject(self, &AssociatedKeys.isCircle, newValue, .OBJC_ASSOCIATION_COPY)
-            self.refreshRounded(cornerRadius: self.cornerRadius, isCircle: newValue)
+            refreshRounded()
         }
     }
     
-    fileprivate func refreshRounded(cornerRadius: CGFloat, isCircle: Bool) {
+    func refreshRounded() {
+        refreshRounded(cornerRadius: cornerRadius)
+    }
+    
+    fileprivate func refreshRounded(cornerRadius: CGFloat) {
         let drawRadius = isCircle == true ? min(self.bounds.size.height, self.bounds.size.width) / 2 : cornerRadius
         layer.cornerRadius = drawRadius
     }

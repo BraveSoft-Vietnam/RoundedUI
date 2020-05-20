@@ -12,4 +12,8 @@ import UIKit
  */
 @IBDesignable
 open class RoundedView: UIView {
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        refreshRounded()
+    }
 }

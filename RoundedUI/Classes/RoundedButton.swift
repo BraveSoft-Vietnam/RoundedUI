@@ -16,7 +16,7 @@ open class RoundedButton: UIButton {
      */
     @IBInspectable open var fillColorNormal: UIColor = .clear {
         didSet {
-            self.refreshDisplayFillColor()
+            refreshDisplayFillColor()
         }
     }
     /**
@@ -24,7 +24,7 @@ open class RoundedButton: UIButton {
      */
     @IBInspectable open var fillColorHighlighted: UIColor? {
         didSet {
-            self.refreshDisplayFillColor()
+            refreshDisplayFillColor()
         }
     }
     /**
@@ -32,7 +32,7 @@ open class RoundedButton: UIButton {
      */
     @IBInspectable open var fillColorSelected: UIColor? {
         didSet {
-            self.refreshDisplayFillColor()
+            refreshDisplayFillColor()
         }
     }
     /**
@@ -40,7 +40,7 @@ open class RoundedButton: UIButton {
      */
     @IBInspectable open var fillColorDisabled: UIColor? {
         didSet {
-            self.refreshDisplayFillColor()
+            refreshDisplayFillColor()
         }
     }
     /**
@@ -48,7 +48,7 @@ open class RoundedButton: UIButton {
      */
     @IBInspectable open var borderColorNormal: UIColor = .clear {
         didSet {
-            self.refreshDisplayBorderColor()
+            refreshDisplayBorderColor()
         }
     }
     /**
@@ -56,7 +56,7 @@ open class RoundedButton: UIButton {
      */
     @IBInspectable open var borderColorHighlighted: UIColor? {
         didSet {
-            self.refreshDisplayBorderColor()
+            refreshDisplayBorderColor()
         }
     }
     /**
@@ -64,7 +64,7 @@ open class RoundedButton: UIButton {
      */
     @IBInspectable open var borderColorSelected : UIColor? {
         didSet {
-            self.refreshDisplayBorderColor()
+            refreshDisplayBorderColor()
         }
     }
     /**
@@ -72,7 +72,7 @@ open class RoundedButton: UIButton {
      */
     @IBInspectable open var borderColorDisabled: UIColor? {
         didSet {
-            self.refreshDisplayBorderColor()
+            refreshDisplayBorderColor()
         }
     }
     
@@ -81,7 +81,7 @@ open class RoundedButton: UIButton {
      */
     @IBInspectable open var isHighlightedEnabled: Bool = true {
         didSet {
-            self.refreshDisplayBorderColor()
+            refreshDisplayBorderColor()
         }
     }
     
@@ -96,16 +96,16 @@ open class RoundedButton: UIButton {
             // Restore user interaction enabled for removed components
             if (self.components.count <= self.componentsLastInteractionEnabled.count) {
                 for i in 0..<self.components.count {
-                    self.components[i].isUserInteractionEnabled = self.componentsLastInteractionEnabled[i]
+                    components[i].isUserInteractionEnabled = self.componentsLastInteractionEnabled[i]
                 }
             }
         }
         
         didSet {
             // Disable interaction in order to propagate touch event to parent
-            self.componentsLastInteractionEnabled.removeAll()
+            componentsLastInteractionEnabled.removeAll()
             for button: UIButton in self.components {
-                self.componentsLastInteractionEnabled.append(button.isUserInteractionEnabled)
+                componentsLastInteractionEnabled.append(button.isUserInteractionEnabled)
                 button.isUserInteractionEnabled = false
             }
         }
@@ -113,19 +113,19 @@ open class RoundedButton: UIButton {
     
     override open var isHighlighted: Bool {
         didSet {
-            self.refreshDisplay()
+            refreshDisplay()
         }
     }
     
     override open var isSelected: Bool {
         didSet {
-            self.refreshDisplay()
+            refreshDisplay()
         }
     }
     
     override open var isEnabled: Bool {
         didSet {
-            self.refreshDisplay()
+            refreshDisplay()
         }
     }
 }
@@ -133,9 +133,10 @@ open class RoundedButton: UIButton {
 // MARK: - Display
 extension RoundedButton {
     fileprivate func refreshDisplay() {
-        self.refreshComponentsStates()
-        self.refreshDisplayFillColor()
-        self.refreshDisplayBorderColor()
+        refreshComponentsStates()
+        refreshDisplayFillColor()
+        refreshDisplayBorderColor()
+        refreshRounded()
     }
     
     fileprivate func refreshDisplayFillColor() {
@@ -170,7 +171,7 @@ extension RoundedButton {
                 borderColor = self.borderColorNormal
             }
         } else if self.state.contains(.highlighted) == true {
-            if let borderColorHighlighted: UIColor = self.borderColorHighlighted {
+            if let borderColorHighlighted: UIColor = borderColorHighlighted {
                 borderColor = borderColorHighlighted
             } else {
                 borderColor = self.borderColorNormal.darker() ?? borderColor
@@ -181,10 +182,10 @@ extension RoundedButton {
     }
     
     fileprivate func refreshComponentsStates() {
-        for button: UIButton in self.components {
-            button.isHighlighted = self.isHighlighted && self.isHighlightedEnabled
-            button.isSelected = self.isSelected
-            button.isEnabled = self.isEnabled
+        for button: UIButton in components {
+            button.isHighlighted = isHighlighted && isHighlightedEnabled
+            button.isSelected = isSelected
+            button.isEnabled = isEnabled
         }
     }
 }
