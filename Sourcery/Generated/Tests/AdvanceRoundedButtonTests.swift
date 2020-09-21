@@ -85,5 +85,49 @@ class AdvanceRoundedButtonSpec: QuickSpec {
                 }
             })
         }
+        describe("appearance") {
+            context("rounded", closure: {
+                beforeEach {
+                    object = AdvanceRoundedButton(frame: CGRect(x: 0, y: 0, width: 280, height: 44))
+                }
+                it("cornerRadius work") {
+                    let cornerRadius: CGFloat = 10
+                    AdvanceRoundedButton.appearance().cornerRadius = cornerRadius
+                }
+                it("roundTopLeft disable work") {
+                    AdvanceRoundedButton.appearance().roundTopLeft = false
+                }
+                it("roundTopRight disable work") {
+                    AdvanceRoundedButton.appearance().roundTopRight = false
+                }
+                it("roundBottomLeft disable work") {
+                    AdvanceRoundedButton.appearance().roundBottomLeft = false
+                }
+                it("roundBottomRight disable work") {
+                    AdvanceRoundedButton.appearance().roundBottomRight = false
+                }
+            })
+            context("border", closure: {
+                beforeEach {
+                    object = AdvanceRoundedButton(frame: CGRect(x: 0, y: 0, width: 280, height: 44))
+                }
+                it("borderColor work") {
+                    AdvanceRoundedButton.appearance().borderColor = UIColor.green
+                }
+                it("borderWidth work") {
+                    let borderWidth: CGFloat = 5
+                    AdvanceRoundedButton.appearance().borderWidth = borderWidth
+                }
+            })
+            context("background", closure: {
+                beforeEach {
+                    object = AdvanceRoundedButton(frame: CGRect(x: 0, y: 0, width: 280, height: 44))
+                }
+                it("backgroundColor work") {
+                    AdvanceRoundedButton.appearance().backgroundColor = UIColor.green
+                }
+            })
+        }
+
     }
 }

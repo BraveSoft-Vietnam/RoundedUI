@@ -64,5 +64,39 @@ class RoundedExtensionSpec: QuickSpec {
                 })
             })
         }
+        
+        describe("appearance") {
+            context("rounded", closure: {
+                it("borderWidth work") {
+                    UIView.appearance().borderWidth = 2
+                }
+                it("borderColor work") {
+                    UIView.appearance().borderColor = nil
+                }
+                it("cornerRadius work") {
+                    UIView.appearance().cornerRadius = 12
+                }
+                it("isCircle work", closure: {
+                    UIView.appearance().isCircle = true
+                })
+            })
+            
+            context("shadow", closure: {
+                it("shadowColor work") {
+                    UIView.appearance().shadowColor = nil
+                }
+                it("shadowRadius work") {
+                    UIView.appearance().shadowRadius = 5
+                }
+                it("shadowOffset work", closure: {
+                    let shadowOffset: CGSize = CGSize(width: 3, height: 3)
+                    UIView.appearance().shadowOffset = shadowOffset
+                })
+                it("shadowOpacity work", closure: {
+                    UIView.appearance().shadowOpacity = 0.5
+                })
+            })
+        }
+
     }
 }
