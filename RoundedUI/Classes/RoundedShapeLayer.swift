@@ -35,6 +35,8 @@ open class RoundedShapeLayer: CAShapeLayer {
     }
     
     fileprivate func updateRoundCorners() {
+        cornerRadius = 0
+        
         // Update content
         let path: UIBezierPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.shapeCornerRadius, roundTopLeft: roundTopLeft, roundTopRight: roundTopRight, roundBottomLeft: roundBottomLeft, roundBottomRight: roundBottomRight)
         self.path = path.cgPath
