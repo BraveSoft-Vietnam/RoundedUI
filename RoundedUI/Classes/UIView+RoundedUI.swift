@@ -23,7 +23,7 @@ protocol RoundedViewProtocol {}
     /**
      Line stroke width. Default is 0
      */
-    @IBInspectable var borderWidth: CGFloat {
+    @IBInspectable dynamic var borderWidth: CGFloat {
         set {
             layer.borderWidth = newValue
         }
@@ -34,7 +34,7 @@ protocol RoundedViewProtocol {}
     /**
      Rounded corner radius. Default is 0
      */
-    @IBInspectable var cornerRadius: CGFloat {
+    @IBInspectable dynamic var cornerRadius: CGFloat {
         set {
             refreshRounded(cornerRadius: newValue)
         }
@@ -45,7 +45,7 @@ protocol RoundedViewProtocol {}
     /**
      Try to round as circle. If `true`, `cornerRadius` will be ignore.
      */
-    @IBInspectable var isCircle: Bool {
+    @IBInspectable dynamic var isCircle: Bool {
         get {
             let defaultValue = false
             guard let value = objc_getAssociatedObject(self, &AssociatedKeys.isCircle) as? Bool else {
@@ -83,7 +83,7 @@ protocol RoundedViewProtocol {}
      
      Note: When config shadow please make sure clipsToBound is turned off or shadow will not be visible
      */
-    @IBInspectable var shadowColor: UIColor? {
+    @IBInspectable dynamic var shadowColor: UIColor? {
         set {
             layer.shadowColor = newValue?.cgColor
         }
@@ -101,7 +101,7 @@ protocol RoundedViewProtocol {}
      
      Note: When config shadow please make sure clipsToBound is turned off or shadow will not be visible
      */
-    @IBInspectable var shadowRadius: CGFloat {
+    @IBInspectable dynamic var shadowRadius: CGFloat {
         set {
             layer.shadowRadius = newValue
         }
@@ -116,7 +116,7 @@ protocol RoundedViewProtocol {}
      
      Note: When config shadow please make sure clipsToBound is turned off or shadow will not be visible
      */
-    @IBInspectable var shadowOffset: CGSize {
+    @IBInspectable dynamic var shadowOffset: CGSize {
         set {
             layer.shadowOffset = newValue
         }
@@ -130,7 +130,7 @@ protocol RoundedViewProtocol {}
      The value in this property must be in the range 0.0 (transparent) to 1.0 (opaque). The default value of this property is 0.0.
      Note: When config shadow please make sure clipsToBound is turned off or shadow will not be visible
      */
-    @IBInspectable var shadowOpacity: Float {
+    @IBInspectable dynamic var shadowOpacity: Float {
         set {
             layer.shadowOpacity = newValue
         }
@@ -142,7 +142,7 @@ protocol RoundedViewProtocol {}
     /**
      Border color. Default is clear color.
      */
-    @IBInspectable var borderColor: UIColor? {
+    @IBInspectable dynamic var borderColor: UIColor? {
         set {
             layer.borderColor = newValue?.cgColor
         }

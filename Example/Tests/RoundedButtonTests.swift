@@ -170,5 +170,59 @@ class RoundedButtonSpec: QuickSpec {
                 })
             })
         }
+        
+        describe("appearance") {
+            context("fillColor", closure: {
+                beforeEach {
+                    button = RoundedButton(frame: CGRect(x: 0, y: 0, width: 280, height: 44))
+                }
+                
+                it("fillColorNormal work", closure: {
+                    let color: UIColor = UIColor.red
+                    RoundedButton.appearance().fillColorNormal = color
+                })
+                it("fillColorHighlighted work", closure: {
+                    let color: UIColor = UIColor.green
+                    RoundedButton.appearance().fillColorHighlighted = color
+                    RoundedButton.appearance().isHighlighted = true
+                })
+                it("fillColorSelected work", closure: {
+                    let color: UIColor = UIColor.blue
+                    RoundedButton.appearance().fillColorSelected = color
+                    RoundedButton.appearance().isSelected = true
+                })
+                it("fillColorDisable work", closure: {
+                    let color: UIColor = UIColor.yellow
+                    RoundedButton.appearance().fillColorDisabled = color
+                    RoundedButton.appearance().isEnabled = false
+                })
+            })
+            
+            context("borderColor", closure: {
+                beforeEach {
+                    button = RoundedButton(frame: CGRect(x: 0, y: 0, width: 280, height: 44))
+                }
+                
+                it("borderColorNormal work", closure: {
+                    let color: UIColor = UIColor.gray
+                    RoundedButton.appearance().borderColorNormal = color
+                })
+                it("borderColorHighlighted work", closure: {
+                    let color: UIColor = UIColor.darkGray
+                    RoundedButton.appearance().borderColorHighlighted = color
+                    RoundedButton.appearance().isHighlighted = true
+                })
+                it("borderColorSelected work", closure: {
+                    let color: UIColor = UIColor.black
+                    RoundedButton.appearance().borderColorSelected = color
+                    RoundedButton.appearance().isSelected = true
+                })
+                it("borderColorDisable work", closure: {
+                    let color: UIColor = UIColor.lightGray
+                    RoundedButton.appearance().borderColorDisabled = color
+                    RoundedButton.appearance().isEnabled = false
+                })
+            })
+        }
     }
 }

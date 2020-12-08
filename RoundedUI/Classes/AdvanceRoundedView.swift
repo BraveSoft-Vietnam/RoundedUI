@@ -18,7 +18,7 @@ open class AdvanceRoundedView: RoundedView, AdvanceRoundedCorners {
     /**
      Round top left corner of the view. If YES then rounded, else not rounded.
      */
-    @IBInspectable open var roundTopLeft: Bool {
+    @IBInspectable dynamic open var roundTopLeft: Bool {
         get {
             return self.roundedLayer.roundTopLeft
         }
@@ -29,7 +29,7 @@ open class AdvanceRoundedView: RoundedView, AdvanceRoundedCorners {
     /**
      Round top right corner of the view. If YES then rounded, else not rounded.
      */
-    @IBInspectable open var roundTopRight: Bool {
+    @IBInspectable dynamic open var roundTopRight: Bool {
         get {
             return self.roundedLayer.roundTopRight
         }
@@ -40,7 +40,7 @@ open class AdvanceRoundedView: RoundedView, AdvanceRoundedCorners {
     /**
      Round bottom right corner of the view. If YES then rounded, else not rounded.
      */
-    @IBInspectable open var roundBottomLeft: Bool {
+    @IBInspectable dynamic open var roundBottomLeft: Bool {
         get {
             return self.roundedLayer.roundBottomLeft
         }
@@ -51,7 +51,7 @@ open class AdvanceRoundedView: RoundedView, AdvanceRoundedCorners {
     /**
      Round bottom left corner of the view. If YES then rounded, else not rounded.
      */
-    @IBInspectable open var roundBottomRight: Bool {
+    @IBInspectable dynamic open var roundBottomRight: Bool {
         get {
             return self.roundedLayer.roundBottomRight
         }

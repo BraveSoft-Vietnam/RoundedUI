@@ -14,7 +14,7 @@ open class RoundedButton: UIButton {
     /**
      Fill color for normal state.
      */
-    @IBInspectable open var fillColorNormal: UIColor = .clear {
+    @IBInspectable dynamic open var fillColorNormal: UIColor = .clear {
         didSet {
             refreshDisplayFillColor()
         }
@@ -22,7 +22,7 @@ open class RoundedButton: UIButton {
     /**
      Fill color for highlighted state. Default is fillColorNormal with darker tone if fillColorNormal is compatible with RGB, else is nil.
      */
-    @IBInspectable open var fillColorHighlighted: UIColor? {
+    @IBInspectable dynamic open var fillColorHighlighted: UIColor? {
         didSet {
             refreshDisplayFillColor()
         }
@@ -30,7 +30,7 @@ open class RoundedButton: UIButton {
     /**
      Fill color for selected state. Default is fillColorNormal.
      */
-    @IBInspectable open var fillColorSelected: UIColor? {
+    @IBInspectable dynamic open var fillColorSelected: UIColor? {
         didSet {
             refreshDisplayFillColor()
         }
@@ -38,7 +38,7 @@ open class RoundedButton: UIButton {
     /**
      Fill color for disabled state. Default is fillColorNormal.
      */
-    @IBInspectable open var fillColorDisabled: UIColor? {
+    @IBInspectable dynamic open var fillColorDisabled: UIColor? {
         didSet {
             refreshDisplayFillColor()
         }
@@ -46,7 +46,7 @@ open class RoundedButton: UIButton {
     /**
      Border color for normal state.
      */
-    @IBInspectable open var borderColorNormal: UIColor = .clear {
+    @IBInspectable dynamic open var borderColorNormal: UIColor = .clear {
         didSet {
             refreshDisplayBorderColor()
         }
@@ -54,7 +54,7 @@ open class RoundedButton: UIButton {
     /**
      Border color for highlighted state. Default is borderColorNormal with darker tone if borderColorNormal is compatible with RGB, else is nil.
      */
-    @IBInspectable open var borderColorHighlighted: UIColor? {
+    @IBInspectable dynamic open var borderColorHighlighted: UIColor? {
         didSet {
             refreshDisplayBorderColor()
         }
@@ -62,7 +62,7 @@ open class RoundedButton: UIButton {
     /**
      Border color for selected state. Default is borderColorNormal.
      */
-    @IBInspectable open var borderColorSelected : UIColor? {
+    @IBInspectable dynamic open var borderColorSelected : UIColor? {
         didSet {
             refreshDisplayBorderColor()
         }
@@ -70,7 +70,7 @@ open class RoundedButton: UIButton {
     /**
      Border color for disabled state. Default is borderColorNormal.
      */
-    @IBInspectable open var borderColorDisabled: UIColor? {
+    @IBInspectable dynamic open var borderColorDisabled: UIColor? {
         didSet {
             refreshDisplayBorderColor()
         }
@@ -79,7 +79,7 @@ open class RoundedButton: UIButton {
     /**
      Enable highlight state when is clicked. If YES, the button is highlighted when clicked, else the button is not highlighted.
      */
-    @IBInspectable open var isHighlightedEnabled: Bool = true {
+    @IBInspectable dynamic open var isHighlightedEnabled: Bool = true {
         didSet {
             refreshDisplayBorderColor()
         }
@@ -91,7 +91,7 @@ open class RoundedButton: UIButton {
     /**
      Set child components in order to config composite buttons. Default is empty.
      */
-    @IBOutlet open var components: Array<UIButton> = Array() {
+    @IBOutlet dynamic open var components: Array<UIButton> = Array() {
         willSet {
             // Restore user interaction enabled for removed components
             if (self.components.count <= self.componentsLastInteractionEnabled.count) {

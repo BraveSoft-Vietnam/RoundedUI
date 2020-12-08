@@ -85,5 +85,52 @@ class AdvanceRoundedViewSpec: QuickSpec {
                 }
             })
         }
+        
+        describe("appearance") {
+            context("rounded", closure: {
+                beforeEach {
+                    object = AdvanceRoundedView(frame: CGRect(x: 0, y: 0, width: 280, height: 44))
+                }
+                it("cornerRadius work") {
+                    let cornerRadius: CGFloat = 10
+                    AdvanceRoundedView.appearance().cornerRadius = cornerRadius
+                }
+                it("roundTopLeft disable work") {
+                    AdvanceRoundedView.appearance().roundTopLeft = false
+                }
+                it("roundTopRight disable work") {
+                    AdvanceRoundedView.appearance().roundTopRight = false
+                }
+                it("roundBottomLeft disable work") {
+                    AdvanceRoundedView.appearance().roundBottomLeft = false
+                }
+                it("roundBottomRight disable work") {
+                    AdvanceRoundedView.appearance().roundBottomRight = false
+                }
+            })
+            context("border", closure: {
+                beforeEach {
+                    object = AdvanceRoundedView(frame: CGRect(x: 0, y: 0, width: 280, height: 44))
+                }
+                it("borderColor work") {
+                    // Test borderColor nil
+                    expect(object.borderColor).to(beNil())
+                    AdvanceRoundedView.appearance().borderColor = UIColor.green
+                }
+                it("borderWidth work") {
+                    let borderWidth: CGFloat = 5
+                    AdvanceRoundedView.appearance().borderWidth = borderWidth
+                }
+            })
+            context("background", closure: {
+                beforeEach {
+                    object = AdvanceRoundedView(frame: CGRect(x: 0, y: 0, width: 280, height: 44))
+                }
+                it("backgroundColor work") {
+                    AdvanceRoundedView.appearance().backgroundColor = UIColor.green
+                }
+            })
+        }
+
     }
 }
