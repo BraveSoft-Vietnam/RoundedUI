@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RoundedUI'
-  s.version          = '1.1.4'
+  s.version          = '1.1.5'
   s.summary          = 'Configure rounded corners UI components on your Interface Builder.'
 
 # This description is used to generate tags and improve search results.
@@ -23,7 +23,7 @@ TODO: Add long description of the pod here.
 
   s.homepage         = 'https://github.com/Hien Pham/RoundedUI'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'APACHE', :file => 'LICENSE' }
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Hien Pham' => 'hienpham@bravesoft.com.vn' }
   s.source           = { :git => 'https://bsvframeworks@bitbucket.org/bravesoftvietnam/roundedui.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
