@@ -37,10 +37,11 @@ open class RoundedShapeLayer: CAShapeLayer {
     fileprivate func updateRoundCorners() {
         cornerRadius = 0
         
-        // Update content
         let path: UIBezierPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.shapeCornerRadius, roundTopLeft: roundTopLeft, roundTopRight: roundTopRight, roundBottomLeft: roundBottomLeft, roundBottomRight: roundBottomRight)
+
+        // Update content
         self.path = path.cgPath
-        
+
         // Update mask
         if self.masksToBounds == true {
             let mask: CAShapeLayer = CAShapeLayer()
@@ -51,8 +52,7 @@ open class RoundedShapeLayer: CAShapeLayer {
         }
 
         // Update stroke
-        let strokePath: UIBezierPath = UIBezierPath(roundedRect: self.strokeLayer.bounds, cornerRadius: self.shapeCornerRadius, roundTopLeft: roundTopLeft, roundTopRight: roundTopRight, roundBottomLeft: roundBottomLeft, roundBottomRight: roundBottomRight)
-        self.strokeLayer.path = strokePath.cgPath
+        self.strokeLayer.path = path.cgPath
         let mask: CAShapeLayer = CAShapeLayer()
         mask.path = path.cgPath
         self.strokeLayer.mask = mask
@@ -79,6 +79,11 @@ open class RoundedShapeLayer: CAShapeLayer {
     }
     
     public override init() {
+        super.init()
+        self.setUp()
+    }
+    
+    public override init(layer: Any) {
         super.init()
         self.setUp()
     }
