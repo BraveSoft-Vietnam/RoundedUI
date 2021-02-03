@@ -94,9 +94,10 @@ open class RoundedButton: UIButton {
     @IBOutlet dynamic open var components: Array<UIButton> = Array() {
         willSet {
             // Restore user interaction enabled for removed components
-            if (self.components.count <= self.componentsLastInteractionEnabled.count) {
-                for i in 0..<self.components.count {
-                    components[i].isUserInteractionEnabled = self.componentsLastInteractionEnabled[i]
+            let oldComponents = components
+            if (oldComponents.count <= componentsLastInteractionEnabled.count) {
+                for i in 0..<oldComponents.count {
+                    oldComponents[i].isUserInteractionEnabled = componentsLastInteractionEnabled[i]
                 }
             }
         }

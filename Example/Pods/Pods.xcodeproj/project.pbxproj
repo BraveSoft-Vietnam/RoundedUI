@@ -1212,6 +1212,37 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		019A3B4463CB5A822C7FAE0B90AD0304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7403BA59AA1B046CCD38F25EAE8933D /* RoundedUI.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RoundedUI/RoundedUI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RoundedUI/RoundedUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RoundedUI/RoundedUI.modulemap";
+				PRODUCT_MODULE_NAME = RoundedUI;
+				PRODUCT_NAME = RoundedUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		185A9FF43280FF7480E18FBC7C04C87E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 640FE055C05B9240C576DF11A590E9FC /* PureLayout.release.xcconfig */;
@@ -1554,37 +1585,6 @@
 			};
 			name = Debug;
 		};
-		827BB9C8AA896BA08C5B6F69FB99BA45 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7403BA59AA1B046CCD38F25EAE8933D /* RoundedUI.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RoundedUI/RoundedUI-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RoundedUI/RoundedUI-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RoundedUI/RoundedUI.modulemap";
-				PRODUCT_MODULE_NAME = RoundedUI;
-				PRODUCT_NAME = RoundedUI;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		AA9753734469E95C7758FF5F3213D4E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A1E5AF24244F35ACBBDC8314A344702B /* Pods-RoundedUI_Example.release.xcconfig */;
@@ -1617,36 +1617,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		C62A11CF988B3C5A1A96ABD156C097C6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6EB71FACF5DFC9A598C8BCCF7E4EE8A /* RoundedUI.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RoundedUI/RoundedUI-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RoundedUI/RoundedUI-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RoundedUI/RoundedUI.modulemap";
-				PRODUCT_MODULE_NAME = RoundedUI;
-				PRODUCT_NAME = RoundedUI;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		CBA4D25F89352D0829B4EAC3FFCEB076 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1710,6 +1680,36 @@
 			};
 			name = Debug;
 		};
+		FB817075BEFF947C81C49C8C76C1FE23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6EB71FACF5DFC9A598C8BCCF7E4EE8A /* RoundedUI.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RoundedUI/RoundedUI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RoundedUI/RoundedUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RoundedUI/RoundedUI.modulemap";
+				PRODUCT_MODULE_NAME = RoundedUI;
+				PRODUCT_NAME = RoundedUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1761,8 +1761,8 @@
 		A722E1C73657AA2C73E40F01C79029BD /* Build configuration list for PBXNativeTarget "RoundedUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C62A11CF988B3C5A1A96ABD156C097C6 /* Debug */,
-				827BB9C8AA896BA08C5B6F69FB99BA45 /* Release */,
+				FB817075BEFF947C81C49C8C76C1FE23 /* Debug */,
+				019A3B4463CB5A822C7FAE0B90AD0304 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
