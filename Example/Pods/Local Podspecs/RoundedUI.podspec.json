@@ -1,22 +1,24 @@
 {
   "name": "RoundedUI",
-  "version": "1.1.3",
+  "version": "1.1.6",
   "summary": "Configure rounded corners UI components on your Interface Builder.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Hien Pham/RoundedUI",
+  "homepage": "https://github.com/bsv-hienpham1991/RoundedUI.git",
   "license": {
-    "type": "APACHE",
+    "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
     "Hien Pham": "hienpham@bravesoft.com.vn"
   },
   "source": {
-    "git": "https://bsvframeworks@bitbucket.org/bravesoftvietnam/roundedui.git",
-    "tag": "1.1.3"
+    "git": "https://github.com/bsv-hienpham1991/RoundedUI.git",
+    "tag": "1.1.6"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "RoundedUI/Classes/**/*"
+  "swift_versions": "5.0",
+  "source_files": "RoundedUI/Classes/**/*",
+  "swift_version": "5.0"
 }

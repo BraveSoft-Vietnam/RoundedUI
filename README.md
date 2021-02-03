@@ -23,19 +23,6 @@ Unfortunately Apple does support for access directly as well as modify attribute
 ## Requirements
 - iOS 9.0+
 
-## Install cocoapod spec repo
-Before running example or install, please run command:  
-```ruby
-pod repo
-```
-In order to check whether the cocoapod spec with the following url has been installed or not:  
-```ruby
-https://bsvframeworks@bitbucket.org/bravesoftvietnam/cocoapods-specs.git
-```
-If not, run the following command:  
-```ruby
-pod repo add bsv_frameworks https://bsvframeworks@bitbucket.org/bravesoftvietnam/cocoapods-specs.git
-```
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -46,11 +33,6 @@ After that rerun command `pod install`
 ## Installation
 
 RoundedUI is available through [CocoaPods](https://cocoapods.org). To install it, first the beginning add the following border to your Podfile:  
-```ruby
-source 'https://github.com/CocoaPods/Specs.git'
-source 'https://bsvframeworks@bitbucket.org/bravesoftvietnam/cocoapods-specs.git'
-```  
-then add:  
 ```ruby
 pod 'RoundedUI'
 ```
