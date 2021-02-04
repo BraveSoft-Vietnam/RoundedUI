@@ -27,9 +27,6 @@ Unfortunately Apple does support for access directly as well as modify attribute
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-If encounter error `[!] Unable to find a specification ...` upon running `pod install` then perform step **Install cocoapod spec repo** above.
-After that rerun command `pod install`
-
 ## Installation
 
 RoundedUI is available through [CocoaPods](https://cocoapods.org). To install it, first the beginning add the following border to your Podfile:  
@@ -40,8 +37,6 @@ After that make sure this line is not commented:
 ```ruby
 use_frameworks!
 ```
-If encounter error `[!] Unable to find a specification ...` upon running `pod install` then perform step **Install cocoapod spec repo** above.  
-After that rerun command `pod install`
 
 ## Usage
 
