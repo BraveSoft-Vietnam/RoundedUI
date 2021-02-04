@@ -1,6 +1,6 @@
 # RoundedUI
 
-![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg) ![Code Coverage](https://img.shields.io/badge/Code%20Coverage-100%25-green.svg) ![Pod](https://img.shields.io/badge/pod-v1.1.0-blue.svg)  
+![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg) ![Code Coverage](https://img.shields.io/badge/Code%20Coverage-100%25-green.svg)
 
 Configure rounded corners UI components on your Interface Builder, written in Swift.
 
