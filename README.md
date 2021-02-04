@@ -127,4 +127,4 @@ Hien, hienpham@bravesoft.com.vn
 
 ## License
 
-RoundedUI is available under the APACHE license. See the LICENSE file for more info.
+RoundedUI is available under the MIT license. See the LICENSE file for more info.
