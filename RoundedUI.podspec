@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+This framework help you configure rounded corners UI components on your Interface Builder without having to specify in code, written in swift.
                        DESC
 
   s.homepage         = 'https://github.com/bsv-hienpham1991/RoundedUI.git'
