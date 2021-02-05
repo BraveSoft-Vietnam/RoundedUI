@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RoundedUI'
-  s.version          = '1.1.11'
+  s.version          = '1.1.12'
   s.summary          = 'Configure rounded corners UI components on your Interface Builder.'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 This framework help you configure rounded corners UI components on your Interface Builder without having to specify in code, written in swift.
                        DESC
 
-  s.homepage         = 'https://github.com/bsv-hienpham1991/RoundedUI.git'
+  s.homepage         = 'https://github.com/BraveSoft-Vietnam/RoundedUI.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Hien Pham' => 'hienpham@bravesoft.com.vn' }
-  s.source           = { :git => 'https://github.com/bsv-hienpham1991/RoundedUI.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/BraveSoft-Vietnam/RoundedUI.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
